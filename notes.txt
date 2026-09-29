@@ -1,0 +1,32 @@
+Last login: Fri Sep 25 15:20:25 on ttys000
+jericoasan@Jericos-MacBook-Air zoom-recordings % DOTNET_ROLL_FORWARD=Major dotnet run --project ZoomRecordingSync.csproj -- \
+  --from 2026-09-01 \
+  --to 2026-09-23 \
+  --output "$PWD/recordings"
+Zoom client_id, client_secret, and account_id are required. Configure them via CLI, environment variables, or a secret store.
+jericoasan@Jericos-MacBook-Air zoom-recordings % export ZOOM_CLIENT_ID='JXrjLdYuSSaxhmkotZ0Rkg'                               
+export ZOOM_CLIENT_SECRET='ewVewkRrbvGhxBijAEsvIeekKEi2yMqy'
+export ZOOM_ACCOUNT_ID='w3cYCW1dSgSMGFsXZar4nw'
+jericoasan@Jericos-MacBook-Air zoom-recordings % DOTNET_ROLL_FORWARD=Major dotnet run --project ZoomRecordingSync.csproj -- \
+  --from 2026-09-01 \
+  --to 2026-09-23 \
+  --output "$PWD/recordings"
+[15:24:18 INF] Starting Zoom recording sync for 2026-09-01T00:00:00.0000000+00:00 through 2026-09-24T00:00:00.0000000+00:00 (owner filter: (none)).
+[15:24:18 INF] Zoom OAuth token obtained; it expires in approximately 3600 seconds.
+[15:24:22 INF] Downloaded recording for recording c4nUYzsCTQ6cflXV0sa-Kw: c4nUYzsCTQ6cflXV0sa-Kw_20260904_070442.mp3 (46656 bytes).
+[15:25:06 INF] Downloaded recording for recording mnf9EnIPSeCsIbFvYvMC1g: mnf9EnIPSeCsIbFvYvMC1g_20260915_060103.mp3 (1685376 bytes).
+dotnet run --project ZoomRecordingSync.csproj -- \
+  --from 2026-09-01 \
+  --to 2026-09-23 \
+  --output ./recordings \
+  --page-size 100
+
+DOTNET_ROLL_FORWARD=Major dotnet run --project ZoomRecordingSync.csproj -- \
+  --from 2026-09-01 \
+  --to 2026-09-23 \
+  --output "$PWD/recordings" \
+  --page-size 2
+
+
+
+

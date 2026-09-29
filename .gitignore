@@ -1,0 +1,12 @@
+bin/
+obj/
+logs/
+*.user
+*.suo
+.vs/
+.idea/
+.DS_Store
+
+# Never commit local secrets or downloaded recordings.
+appsettings.Local.json
+.env
